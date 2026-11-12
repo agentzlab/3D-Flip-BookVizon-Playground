@@ -1,0 +1,950 @@
+{
+  "browser": "153.0.8010.0",
+  "flags": [
+    "--disable-gpu",
+    "--disable-accelerated-2d-canvas"
+  ],
+  "viewport": [
+    844,
+    390
+  ],
+  "dpr": 2,
+  "trials": [
+    {
+      "flipped": 0,
+      "repeat": 0,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "board",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": false,
+      "readback": false,
+      "count": 120,
+      "elapsedMs": 12.299999999813735,
+      "msPerPose": 0.10249999999844779,
+      "drawsPerPose": 64,
+      "fillsPerPose": 0,
+      "clearsPerPose": 1,
+      "finalDrainMs": 31.399999999441206,
+      "bakeSubmitMs": 0,
+      "bakeReadbackMs": 0
+    },
+    {
+      "flipped": 0,
+      "repeat": 0,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "board",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": false,
+      "readback": true,
+      "count": 120,
+      "elapsedMs": 1837.2000000001863,
+      "msPerPose": 15.310000000001553,
+      "drawsPerPose": 64,
+      "fillsPerPose": 0,
+      "clearsPerPose": 1,
+      "finalDrainMs": 4.7000000001862645,
+      "bakeSubmitMs": 0,
+      "bakeReadbackMs": 0
+    },
+    {
+      "flipped": 0,
+      "repeat": 0,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "board",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": true,
+      "readback": false,
+      "count": 120,
+      "elapsedMs": 16.899999999441206,
+      "msPerPose": 0.14083333332867673,
+      "drawsPerPose": 64,
+      "fillsPerPose": 0,
+      "clearsPerPose": 1,
+      "finalDrainMs": 9.700000000186265,
+      "bakeSubmitMs": 1.300000000745058,
+      "bakeReadbackMs": 17
+    },
+    {
+      "flipped": 0,
+      "repeat": 0,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "board",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": true,
+      "readback": true,
+      "count": 120,
+      "elapsedMs": 1681.2999999998137,
+      "msPerPose": 14.010833333331782,
+      "drawsPerPose": 64,
+      "fillsPerPose": 0,
+      "clearsPerPose": 1,
+      "finalDrainMs": 4.900000000372529,
+      "bakeSubmitMs": 1.2000000001862645,
+      "bakeReadbackMs": 4.7000000001862645
+    },
+    {
+      "flipped": 0,
+      "repeat": 1,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "board",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": true,
+      "readback": false,
+      "count": 120,
+      "elapsedMs": 16.5,
+      "msPerPose": 0.1375,
+      "drawsPerPose": 64,
+      "fillsPerPose": 0,
+      "clearsPerPose": 1,
+      "finalDrainMs": 11.200000000186265,
+      "bakeSubmitMs": 1.2000000001862645,
+      "bakeReadbackMs": 4.5
+    },
+    {
+      "flipped": 0,
+      "repeat": 1,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "board",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": true,
+      "readback": true,
+      "count": 120,
+      "elapsedMs": 1651.9000000003725,
+      "msPerPose": 13.765833333336438,
+      "drawsPerPose": 64,
+      "fillsPerPose": 0,
+      "clearsPerPose": 1,
+      "finalDrainMs": 4.3999999994412065,
+      "bakeSubmitMs": 1.2999999998137355,
+      "bakeReadbackMs": 3.599999999627471
+    },
+    {
+      "flipped": 0,
+      "repeat": 1,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "board",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": false,
+      "readback": false,
+      "count": 120,
+      "elapsedMs": 9.200000000186265,
+      "msPerPose": 0.07666666666821888,
+      "drawsPerPose": 64,
+      "fillsPerPose": 0,
+      "clearsPerPose": 1,
+      "finalDrainMs": 7.2000000001862645,
+      "bakeSubmitMs": 0,
+      "bakeReadbackMs": 0
+    },
+    {
+      "flipped": 0,
+      "repeat": 1,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "board",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": false,
+      "readback": true,
+      "count": 120,
+      "elapsedMs": 1488.699999999255,
+      "msPerPose": 12.405833333327125,
+      "drawsPerPose": 64,
+      "fillsPerPose": 0,
+      "clearsPerPose": 1,
+      "finalDrainMs": 5.300000000745058,
+      "bakeSubmitMs": 0,
+      "bakeReadbackMs": 0
+    },
+    {
+      "flipped": 0,
+      "repeat": 2,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "board",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": false,
+      "readback": false,
+      "count": 120,
+      "elapsedMs": 8.399999999441206,
+      "msPerPose": 0.06999999999534338,
+      "drawsPerPose": 64,
+      "fillsPerPose": 0,
+      "clearsPerPose": 1,
+      "finalDrainMs": 10.600000000558794,
+      "bakeSubmitMs": 0,
+      "bakeReadbackMs": 0
+    },
+    {
+      "flipped": 0,
+      "repeat": 2,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "board",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": false,
+      "readback": true,
+      "count": 120,
+      "elapsedMs": 1146.4000000003725,
+      "msPerPose": 9.553333333336438,
+      "drawsPerPose": 64,
+      "fillsPerPose": 0,
+      "clearsPerPose": 1,
+      "finalDrainMs": 5.7000000001862645,
+      "bakeSubmitMs": 0,
+      "bakeReadbackMs": 0
+    },
+    {
+      "flipped": 0,
+      "repeat": 2,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "board",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": true,
+      "readback": false,
+      "count": 120,
+      "elapsedMs": 8.900000000372529,
+      "msPerPose": 0.07416666666977108,
+      "drawsPerPose": 64,
+      "fillsPerPose": 0,
+      "clearsPerPose": 1,
+      "finalDrainMs": 9.099999999627471,
+      "bakeSubmitMs": 1.8999999994412065,
+      "bakeReadbackMs": 3.2000000001862645
+    },
+    {
+      "flipped": 0,
+      "repeat": 2,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "board",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": true,
+      "readback": true,
+      "count": 120,
+      "elapsedMs": 1146.9000000003725,
+      "msPerPose": 9.557500000003104,
+      "drawsPerPose": 64,
+      "fillsPerPose": 0,
+      "clearsPerPose": 1,
+      "finalDrainMs": 5.099999999627471,
+      "bakeSubmitMs": 1,
+      "bakeReadbackMs": 3.2999999998137355
+    },
+    {
+      "flipped": 3,
+      "repeat": 0,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "paper",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": false,
+      "readback": false,
+      "count": 120,
+      "elapsedMs": 21.700000000186265,
+      "msPerPose": 0.18083333333488555,
+      "drawsPerPose": 64,
+      "fillsPerPose": 2,
+      "clearsPerPose": 1,
+      "finalDrainMs": 77.29999999981374,
+      "bakeSubmitMs": 0,
+      "bakeReadbackMs": 0
+    },
+    {
+      "flipped": 3,
+      "repeat": 0,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "paper",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": false,
+      "readback": true,
+      "count": 120,
+      "elapsedMs": 2656.7000000001863,
+      "msPerPose": 22.13916666666822,
+      "drawsPerPose": 64,
+      "fillsPerPose": 2,
+      "clearsPerPose": 1,
+      "finalDrainMs": 4.1000000005587935,
+      "bakeSubmitMs": 0,
+      "bakeReadbackMs": 0
+    },
+    {
+      "flipped": 3,
+      "repeat": 0,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "paper",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": true,
+      "readback": false,
+      "count": 120,
+      "elapsedMs": 13.299999999813735,
+      "msPerPose": 0.11083333333178112,
+      "drawsPerPose": 64,
+      "fillsPerPose": 2,
+      "clearsPerPose": 1,
+      "finalDrainMs": 17.5,
+      "bakeSubmitMs": 1.800000000745058,
+      "bakeReadbackMs": 23.399999999441206
+    },
+    {
+      "flipped": 3,
+      "repeat": 0,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "paper",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": true,
+      "readback": true,
+      "count": 120,
+      "elapsedMs": 2740,
+      "msPerPose": 22.833333333333332,
+      "drawsPerPose": 64,
+      "fillsPerPose": 2,
+      "clearsPerPose": 1,
+      "finalDrainMs": 4,
+      "bakeSubmitMs": 9.5,
+      "bakeReadbackMs": 4
+    },
+    {
+      "flipped": 3,
+      "repeat": 1,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "paper",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": true,
+      "readback": false,
+      "count": 120,
+      "elapsedMs": 14.200000000186265,
+      "msPerPose": 0.11833333333488553,
+      "drawsPerPose": 64,
+      "fillsPerPose": 2,
+      "clearsPerPose": 1,
+      "finalDrainMs": 15.700000000186265,
+      "bakeSubmitMs": 1.599999999627471,
+      "bakeReadbackMs": 6.300000000745058
+    },
+    {
+      "flipped": 3,
+      "repeat": 1,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "paper",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": true,
+      "readback": true,
+      "count": 120,
+      "elapsedMs": 2748.7999999998137,
+      "msPerPose": 22.906666666665114,
+      "drawsPerPose": 64,
+      "fillsPerPose": 2,
+      "clearsPerPose": 1,
+      "finalDrainMs": 3.900000000372529,
+      "bakeSubmitMs": 13.599999999627471,
+      "bakeReadbackMs": 26
+    },
+    {
+      "flipped": 3,
+      "repeat": 1,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "paper",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": false,
+      "readback": false,
+      "count": 120,
+      "elapsedMs": 10.799999999813735,
+      "msPerPose": 0.0899999999984478,
+      "drawsPerPose": 64,
+      "fillsPerPose": 2,
+      "clearsPerPose": 1,
+      "finalDrainMs": 19.700000000186265,
+      "bakeSubmitMs": 0,
+      "bakeReadbackMs": 0
+    },
+    {
+      "flipped": 3,
+      "repeat": 1,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "paper",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": false,
+      "readback": true,
+      "count": 120,
+      "elapsedMs": 2158.9000000003725,
+      "msPerPose": 17.990833333336436,
+      "drawsPerPose": 64,
+      "fillsPerPose": 2,
+      "clearsPerPose": 1,
+      "finalDrainMs": 5.599999999627471,
+      "bakeSubmitMs": 0,
+      "bakeReadbackMs": 0
+    },
+    {
+      "flipped": 3,
+      "repeat": 2,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "paper",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": false,
+      "readback": false,
+      "count": 120,
+      "elapsedMs": 19.600000000558794,
+      "msPerPose": 0.16333333333798994,
+      "drawsPerPose": 64,
+      "fillsPerPose": 2,
+      "clearsPerPose": 1,
+      "finalDrainMs": 31.59999999962747,
+      "bakeSubmitMs": 0,
+      "bakeReadbackMs": 0
+    },
+    {
+      "flipped": 3,
+      "repeat": 2,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "paper",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": false,
+      "readback": true,
+      "count": 120,
+      "elapsedMs": 2304.600000000559,
+      "msPerPose": 19.205000000004656,
+      "drawsPerPose": 64,
+      "fillsPerPose": 2,
+      "clearsPerPose": 1,
+      "finalDrainMs": 5.699999999254942,
+      "bakeSubmitMs": 0,
+      "bakeReadbackMs": 0
+    },
+    {
+      "flipped": 3,
+      "repeat": 2,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "paper",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": true,
+      "readback": false,
+      "count": 120,
+      "elapsedMs": 11.899999999441206,
+      "msPerPose": 0.09916666666201006,
+      "drawsPerPose": 64,
+      "fillsPerPose": 2,
+      "clearsPerPose": 1,
+      "finalDrainMs": 19,
+      "bakeSubmitMs": 1.400000000372529,
+      "bakeReadbackMs": 5.099999999627471
+    },
+    {
+      "flipped": 3,
+      "repeat": 2,
+      "geometry": {
+        "pageSize": 262,
+        "pageH": 262,
+        "winW": 922,
+        "winH": 498,
+        "canvasDpr": 2,
+        "canvas": [
+          1844,
+          996
+        ],
+        "material": "paper",
+        "images": [
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          },
+          {
+            "width": 1750,
+            "height": 1750,
+            "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPE"
+          }
+        ]
+      },
+      "baked": true,
+      "readback": true,
+      "count": 120,
+      "elapsedMs": 2554.2000000001863,
+      "msPerPose": 21.285000000001553,
+      "drawsPerPose": 64,
+      "fillsPerPose": 2,
+      "clearsPerPose": 1,
+      "finalDrainMs": 4.2999999998137355,
+      "bakeSubmitMs": 1.3999999994412065,
+      "bakeReadbackMs": 4
+    }
+  ]
+}

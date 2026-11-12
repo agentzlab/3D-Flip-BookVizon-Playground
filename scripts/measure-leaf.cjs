@@ -49,7 +49,7 @@ window.__leafAudit = {
       if (readback) ctx2d.getImageData(0, 0, canvas.width, canvas.height);
     }
     try {
-      for (let i=0; i<120; i++) pose(i);
+      for (let i=0; i<12; i++) pose(i);
       // Drain queued raster work before timing submission-only trials.
       ctx2d.getImageData(0,0,canvas.width,canvas.height);
       calls=0; fills=0; clears=0;
@@ -84,21 +84,25 @@ const server = http.createServer((req,res) => {
 });
 (async () => {
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+  console.log('Launching Chromium');
   const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH || '/usr/bin/chromium',args:['--disable-gpu','--disable-accelerated-2d-canvas']});
   try {
     const page=await browser.newPage({viewport:{width:844,height:390},deviceScaleFactor:2});
     await page.route('https://**/*', route=>route.abort());
+    console.log('Opening viewer');
     await page.goto('http://127.0.0.1:'+server.address().port,{waitUntil:'load'});
     await page.waitForFunction(()=>window.__leafAudit && document.body.dataset.flipReady==='1');
     const results={browser:browser.version(),flags:['--disable-gpu','--disable-accelerated-2d-canvas'],viewport:[844,390],dpr:2,trials:[]};
     for (const f of [0,3]) {
+      console.log('Preparing leaf '+f);
       const geometry=await page.evaluate(f=>__leafAudit.prepare(f),f);
-      for(let repeat=0;repeat<5;repeat++) {
+      for(let repeat=0;repeat<3;repeat++) {
         // Alternate order to avoid giving either source a consistent warmup advantage.
         for (const baked of (repeat%2 ? [true,false] : [false,true])) {
           for(const readback of [false,true]) {
-            const trial=await page.evaluate(({baked,readback})=>__leafAudit.measure(baked,readback,240),{baked,readback});
+            const trial=await page.evaluate(({baked,readback})=>__leafAudit.measure(baked,readback,120),{baked,readback});
             results.trials.push({flipped:f,repeat,geometry,...trial});
+            console.log(JSON.stringify({flipped:f,repeat,baked,readback,msPerPose:trial.msPerPose}));
           }
         }
       }
