@@ -4929,7 +4929,7 @@
          the front cover (0) or the back cover (N-1), it's board. */
       var leafPages = dir === "next" ? [2 * flipped, 2 * flipped + 1] : [2 * flipped - 2, 2 * flipped - 1];
       leafMaterial = (leafPages.indexOf(0) >= 0 || leafPages.indexOf(N - 1) >= 0) ? "board" : "paper";
-      if (leafMaterial === "board") { leafFlex = 0; leafDurMul = isMag() ? (REDUCED ? 1.1 : 1.18) : 1.0; leafShadeMul = 1.35; }
+      if (leafMaterial === "board") { leafFlex = isMag() ? 0 : 0.2; leafDurMul = isMag() ? (REDUCED ? 1.1 : 1.18) : 1.0; leafShadeMul = 1.35; }
       else { leafFlex = 1; leafDurMul = 1; leafShadeMul = 1; }
       if (dir === "next") {
         if (flipped >= HALF) return false;
