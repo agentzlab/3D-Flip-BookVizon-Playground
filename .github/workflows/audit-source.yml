@@ -1,0 +1,21 @@
+name: Audit source inspection
+on:
+  push:
+    branches: [sol/audit-update-03]
+    paths: [.github/workflows/audit-source.yml]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print viewer source regions
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          lines = Path('index.html').read_text().splitlines()
+          for lo, hi in [(3700, 3900), (4250, 4350), (4400, 4900), (5000, 5440), (5600, 5780)]:
+              for n in range(lo, min(hi, len(lines)) + 1):
+                  print(f'{n}: {lines[n-1]}')
+          PY
