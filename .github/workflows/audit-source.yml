@@ -15,7 +15,22 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           lines = Path('index.html').read_text().splitlines()
-          for lo, hi in [(3700, 3900), (4250, 4350), (4400, 4900), (5000, 5440), (5600, 5780)]:
+          for lo, hi in [(4890, 5005)]:
               for n in range(lo, min(hi, len(lines)) + 1):
                   print(f'{n}: {lines[n-1]}')
+          for i, line in enumerate(lines):
+              if any(('function ' + name + '(') in line for name in ['placeSave', 'refreshTextChrome', 'refreshCompareChrome', 'refreshListenChrome', 'refreshMarkChrome', 'updateShelfAmbient']):
+                  for j in range(i, min(i+65, len(lines))):
+                      if len(lines[j]) < 2000: print(f'{j+1}: {lines[j]}')
           PY
+      - name: Check drag queue
+        run: |
+          git fetch origin sol/drag-raf
+          git checkout --detach FETCH_HEAD
+          node scripts/check-drag-raf.cjs
+          node - <<'JS'
+          const fs=require('fs'),vm=require('vm');
+          const html=fs.readFileSync('index.html','utf8');
+          let count=0;for(const m of html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)){new vm.Script(m[1]);count++;}
+          console.log({inlineScriptsParsed:count});
+          JS
