@@ -4555,7 +4555,7 @@
           waits++;
           if (dragTurnReady(dir) || waits >= 4) {
             d.pendingDir = null;
-            if (activateDragFlip(d, dir)) poseDragAt(d);
+            if (activateDragFlip(d, dir)) queueDragPaint(d);
           } else {
             waitOnce();
           }
@@ -5441,6 +5441,7 @@
       turnGen++;
       animating = false;
       pendingDir = null;
+      cancelDragPaint();
       drag = null;
       bookWrap.classList.remove("grabbing");
       hideLeaf();
@@ -5506,6 +5507,21 @@
 
     /* ---- drag the page ---- */
     var drag = null;
+    // EXPERIMENT: keep event sampling immediate, but paint only the latest
+    // leaf pose once per animation frame. Decode-ready callbacks share it.
+    var dragPaintRaf = 0;
+    function cancelDragPaint() {
+      if (dragPaintRaf) cancelAnimationFrame(dragPaintRaf);
+      dragPaintRaf = 0;
+    }
+    function queueDragPaint(d) {
+      if (dragPaintRaf) return;
+      var gen = turnGen;
+      dragPaintRaf = requestAnimationFrame(function () {
+        dragPaintRaf = 0;
+        if (drag === d && d.active && turnGen === gen) poseDragAt(d);
+      });
+    }
     function dragTheta(d) {
       var dx = d.dx;
       if (d.dir === "next") return Math.max(-180, Math.min(0, 180 * dx / pageSize));
@@ -5592,21 +5608,26 @@
         setCam(Math.max(lo, Math.min(hi, drag.camFrom + drag.dx)));
         return;
       }
-      if (isMag()) {
-        var F = dragF(drag, e.clientX, e.clientY);
-        drag.F = F;
-        var pNow = poseTurn(F, null);
-        drag.p = pNow;
-        glideEl.style.transform = "translateX(" + (drag.g0 + (drag.g1 - drag.g0) * pNow) + "px)";
-        return;
-      }
-      var th = dragTheta(drag);
-      drag.theta = th;
-      var frac = Math.abs(th - (drag.dir === "next" ? 0 : -180)) / 180;
-      poseLeaf(th, drag.dir === "next" ? 1 : -1, drag.g0 + (drag.g1 - drag.g0) * frac);
+      queueDragPaint(drag);
     });
     function endDrag(cancelled) {
       if (!drag) return;
+      cancelDragPaint();
+      // Release may precede the queued frame: settle from the newest finger
+      // position without an off-frame paint or losing the last sample.
+      var releaseGlide = null;
+      if (drag.active && drag.kind === "flip") {
+        var progress;
+        if (isMag()) {
+          drag.F = dragF(drag, drag.lastX, drag.lastY);
+          var fold = calcFold(drag.F, turnCorner, pageSize, pageH);
+          progress = fold.valid ? fold.progress : lastPoseP;
+        } else {
+          drag.theta = dragTheta(drag);
+          progress = Math.abs(drag.theta - (drag.dir === "next" ? 0 : -180)) / 180;
+        }
+        releaseGlide = drag.g0 + (drag.g1 - drag.g0) * progress;
+      }
       var d = drag; drag = null;
       bookWrap.classList.remove("grabbing");
       if (d.active) manualNav();
@@ -5690,6 +5711,7 @@
         return;
       }
       var gNow = parseFloat((glideEl.style.transform || "").replace(/[^0-9.\-]/g, "")) || 0;
+      if (releaseGlide !== null) gNow = releaseGlide;
       var landFocus = d.dir === "next" ? 0 : 1;
       var flick = d.dir === "next" ? vel < -0.45 : vel > 0.45;
       if (isMag()) {
