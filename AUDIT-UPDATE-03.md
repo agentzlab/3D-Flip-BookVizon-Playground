@@ -1,7 +1,7 @@
 # Audit Update 03
 
 Date: 2026-11-11 (America/Los_Angeles)
-Status: in progress
+Status: complete — requested measurements, source audit and reference commits recorded; device harvest checks remain outstanding
 
 Baseline: `main @ 99d1ed28bb3e9a3a8ce695c28624edd14e4aedb2`, v13.57. Read PLAYGROUND.md. Main and all book content remain untouched. Findings continue from 10. Experiments are reference work for Jon → Trinity → Penguin Lab gates; nothing here ships directly. Timings describe this software-rendered sandbox, not iPhone feel.
 
@@ -30,11 +30,11 @@ The temporary bake is two offscreen 2D canvases, drawn once per trial as a stand
 
 Baked minus original: cover **+0.0344 ms submission / +0.0217 ms readback-inclusive**; interior **-0.0353 / +2.5633 ms**. Readback-inclusive interior is about **13.0% slower**. Cover trials drifted substantially (original 9.55–15.31 ms, baked 9.56–14.01 ms), so tiny cover differences are noise. No robust performance gain established. The interior submission saving does not survive the forced-raster proxy. Retain this as sandbox evidence only; a device run would need compositor/frame traces and visual-quality checks.
 
-Remaining results: bake decision (11), drag painting (12), landing handoff (13), cover reference variants (14).
+Results 11–14 below complete the remaining assignment.
 
 ## 11 — Bake branch decision (assignment 2)
 
-Branch: `sol/audit-update-03`; decision commit: the introducing commit for this section, indexed by the next update. **Skip `sol/leaf-bake`**, as authorized when item 1 does not leave it promising. No production bake implementation or branch is created.
+Branch: `sol/audit-update-03`; decision commit: `728b74c8d4914de23898b9cffb5d456fe5704b19`. **Skip `sol/leaf-bake`**, as authorized when item 1 does not leave it promising. No production bake implementation or branch is created.
 
 Tried: a display-size two-face bake inside the measurement harness, keeping 64 strips and the exact bend math. Found: unchanged call count, no stable cover gain, worse interior readback-inclusive cost, and extra per-turn work/memory (~2.20 MB for both 524² RGBA faces before overhead). Recommend: do not pursue this variant on this evidence. A software result cannot rule out a device-specific benefit, but it does not justify adding the cache/lifecycle/resize complexity here.
 
@@ -61,3 +61,33 @@ Source anchor: pristine main, index.html. Source inspected through GitHub Action
 **Hitch assessment:** the overlap of image/UI writes, optional text/overlay rebuilds and synchronous persistence is a credible landing workload, and warming resumes immediately after settlement. This is a source-backed candidate, not a measured or reproduced landing hitch; no iPhone/WKWebView performance claim. Keep this separate from finding 02's geometric glide error (5014), which can visibly jump regardless of render cost. Recommend a device performance trace around onSwap/render, placeSave and flushWarm, with text/on-art/search enabled and disabled, before splitting critical image handoff from deferred chrome/save/warm work. Moving persistence blindly could lose the last place on app backgrounding.
 
 Fresh validation: Actions job 130974271910 reran the actual committed drag harness on sol/drag-raf @873031ae: all six checks passed, 20 moves → one frame pose, latest release retained. All six inline scripts parsed successfully. This updates result 12's prior-session-only test provenance. Browser/device interaction checks remain pending for harvest.
+
+## 14 — Cover timing references (assignment 5)
+
+Branch: `sol/cover-timing`, based directly on pristine main; two separate commits, each pushed immediately after creation.
+
+| Reference | Commit | Hardcover board profile |
+| --- | --- | --- |
+| A: rigid sine | `7f0896dd1ca67b6597567b81a8b61474141a7bd1` | Full normal turn 950 ms; multiplier 1.0; easeInOutSine; leafFlex 0 |
+| B: partial flex | `a031d729743c09b0fe46f4e8b151a4e87d82b03e` | Same timing, leafFlex 0.2 |
+
+A changes setupTurn's board duration selection (4932) and animateLeaf's easing selection (5012); paper was already sine and is unchanged. Magazine's original board duration/easing is preserved. Reduced motion retains its existing base duration with Hardcover multiplier 1.0; “950 ms” describes the normal-motion full turn, not every partial settlement or reduced-motion turn. The existing partial-drag minimum/distance scaling remains.
+
+B changes only the board flex selection in source, plus its experiment note. Chosen flex 0.2 is one fifth of the paper parameter and gives a maximum 4.8° tip lag at mid-turn. The 64 strips and exact bend integral stay in use; board face shading/highlights remain suppressed. Shadow formulas/strengths are unchanged, although the existing cast-shadow position naturally tracks the newly bent tip. Camera target/easing code is unchanged; its existing duration argument follows the changed leafDurMul so it remains synchronized with the turn. Artwork and book content are untouched.
+
+Found/recommend: these are isolated reference diffs for Jon/Trinity's A/B review, not measured improvements or ship candidates. Compare main/A/B on iPhone for stiffness, reversal, partial-drag release, cover-to-base fade and mid-turn under-page bleed. The known finding 02 glide formula is deliberately unchanged. No WebGL or CSS-3D renderer retrial was made, so there is no new embedded-webview renderer claim.
+
+Validation: GitHub Actions run `43155659084`, job `130974869378`, succeeded. Both variants parsed all six inline scripts and passed git diff --check. Replacement counts required exact baseline matches; the B index was checked byte-for-byte against main with only the three authorized replacements. The plugin then read both commit patches: A has two changed source lines; B adds one changed source line. Each has NOTES-cover-timing.md. Push logs verify A reached GitHub before B was created/pushed.
+
+## Completion and harvest index
+
+| Branch | Remote commit(s) / purpose |
+| --- | --- |
+| `sol/audit-update-03` | This completed report, measurement harness and raw measurements; result 10 `ee4c60aae699ada622af5f6492136fd8ef9f5ff6`; result 11 `728b74c8d4914de23898b9cffb5d456fe5704b19`; result 12 `d8101b05855e8461aee14760c0b58544584fe3d5`; result 13 `998fb0e7e6603b32f47511ed8579ea6b2f63abd6`; final report is branch HEAD |
+| `sol/drag-raf` | `873031aed7d28381d8aa0e0431a74b78042e0343` |
+| `sol/cover-timing` | A `7f0896dd1ca67b6597567b81a8b61474141a7bd1` → B/head `a031d729743c09b0fe46f4e8b151a4e87d82b03e` |
+| `sol/leaf-bake` | Intentionally skipped under the conditional assignment; no branch/production bake |
+
+All continuation repository access and orchestration used the GitHub plugin. Temporary GitHub Actions jobs supplied source inspection and verification despite the large-file contents limitation, and generated/pushed the cover references from pinned main. The temporary workflow was removed after success (`4a167df8d9dd422747c184172efd64c269e37bf7`); it is absent from final trees and never touched main.
+
+No merge, deploy or shipping-repo change was made. Timing result 10 remains software-rendered Chromium evidence. Results 12/14 have deterministic/source checks, not device visual acceptance. Result 13 identifies plausible landing work without claiming a reproduced or timed hitch. Remaining device checks are harvest gates, not concealed completed tests.
