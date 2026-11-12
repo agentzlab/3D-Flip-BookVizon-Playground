@@ -4929,7 +4929,7 @@
          the front cover (0) or the back cover (N-1), it's board. */
       var leafPages = dir === "next" ? [2 * flipped, 2 * flipped + 1] : [2 * flipped - 2, 2 * flipped - 1];
       leafMaterial = (leafPages.indexOf(0) >= 0 || leafPages.indexOf(N - 1) >= 0) ? "board" : "paper";
-      if (leafMaterial === "board") { leafFlex = 0; leafDurMul = REDUCED ? 1.1 : 1.18; leafShadeMul = 1.35; }
+      if (leafMaterial === "board") { leafFlex = 0; leafDurMul = isMag() ? (REDUCED ? 1.1 : 1.18) : 1.0; leafShadeMul = 1.35; }
       else { leafFlex = 1; leafDurMul = 1; leafShadeMul = 1; }
       if (dir === "next") {
         if (flipped >= HALF) return false;
@@ -5009,7 +5009,7 @@
         try {
           if (t0 === null) t0 = ts;
           var raw = Math.min(1, (ts - t0) / dur);
-          var e = leafMaterial === "board" ? easeHeavy(raw) : easeInOutSine(raw);
+          var e = easeInOutSine(raw); // EXPERIMENT: board uses the same sine timing as paper
           var ang = fromDeg + (toDeg - fromDeg) * e;
           var frac = Math.abs(ang - fromDeg) / 180;
           poseLeaf(ang, lagSign, gFrom + (gTo - gFrom) * frac);
