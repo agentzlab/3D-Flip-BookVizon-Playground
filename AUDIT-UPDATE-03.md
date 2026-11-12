@@ -37,3 +37,13 @@ Remaining results: bake decision (11), drag painting (12), landing handoff (13),
 Branch: `sol/audit-update-03`; decision commit: the introducing commit for this section, indexed by the next update. **Skip `sol/leaf-bake`**, as authorized when item 1 does not leave it promising. No production bake implementation or branch is created.
 
 Tried: a display-size two-face bake inside the measurement harness, keeping 64 strips and the exact bend math. Found: unchanged call count, no stable cover gain, worse interior readback-inclusive cost, and extra per-turn work/memory (~2.20 MB for both 524² RGBA faces before overhead). Recommend: do not pursue this variant on this evidence. A software result cannot rule out a device-specific benefit, but it does not justify adding the cache/lifecycle/resize complexity here.
+
+## 12 — Drag paint queue (assignment 3)
+
+Branch: `sol/drag-raf`; verified remote commit: `873031aed7d28381d8aa0e0431a74b78042e0343`. This is the plugin-published equivalent of the earlier local-only work; use the remote SHA for harvesting.
+
+Baseline pointermove calls poseLeaf/poseTurn directly on every qualifying move, not through a shared animation-frame queue. Decode-ready activation can also pose directly. The experiment routes both through queueDragPaint; input sampling remains immediate, one pending callback paints the latest drag, and identity/turn-generation checks reject stale work. Release cancels pending painting and computes the settle start from the latest sampled position. Mode change cancels the queue.
+
+The committed deterministic harness covers six scenarios and asserts 20 moves coalesce to zero immediate poses and one frame pose, plus latest-position release and stale-callback rejection. These are the prior session's recorded passing checks; this plugin-only continuation inspected the committed source/diff but did not rerun Node or a browser. They do not establish iPhone frame rate or smoothness. The known finding 02 partial-drag landing interpolation remains unchanged: the reported 70.75 px case is not fixed, and its precise offset depends on the release sample. Pointercancel commit behavior also remains a separate baseline issue. See NOTES-drag-raf.md and scripts/check-drag-raf.cjs on that branch.
+
+Recommendation: device-test gesture release, reverse/cancel, decode-delayed activation and mode switches before any harvest. No renderer change or WebGL/CSS-3D retrial.
