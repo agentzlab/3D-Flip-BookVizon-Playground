@@ -7,7 +7,7 @@ Baseline: `main @ 99d1ed28bb3e9a3a8ce695c28624edd14e4aedb2`, v13.57. Read PLAYGR
 
 ## 10 — Per-pose draw cost (assignment 1)
 
-Branch: `sol/audit-update-03`. Instrumentation commit: `8ec271d2128bad64be6df54df9361d896f54619d`. Result commit: this section's introducing commit (see git log -- AUDIT-UPDATE-03.md); its SHA is indexed below when the next result lands.
+Branch: `sol/audit-update-03`. Instrumentation commit: `8ec271d2128bad64be6df54df9361d896f54619d`. Result commit: `ee4c60aae699ada622af5f6492136fd8ef9f5ff6`.
 
 Reproduction: `CHROME_PATH=/tmp/chromium node scripts/measure-leaf.cjs leaf-measurements.json` (Playwright required; set CHROME_PATH to an installed Chromium). Harness serves the real index.html with a temporary closure hook; it does not change the production viewer. Raw trials: `measurements/leaf-cost.json`.
 
@@ -31,3 +31,9 @@ The temporary bake is two offscreen 2D canvases, drawn once per trial as a stand
 Baked minus original: cover **+0.0344 ms submission / +0.0217 ms readback-inclusive**; interior **-0.0353 / +2.5633 ms**. Readback-inclusive interior is about **13.0% slower**. Cover trials drifted substantially (original 9.55–15.31 ms, baked 9.56–14.01 ms), so tiny cover differences are noise. No robust performance gain established. The interior submission saving does not survive the forced-raster proxy. Retain this as sandbox evidence only; a device run would need compositor/frame traces and visual-quality checks.
 
 Remaining results: bake decision (11), drag painting (12), landing handoff (13), cover reference variants (14).
+
+## 11 — Bake branch decision (assignment 2)
+
+Branch: `sol/audit-update-03`; decision commit: the introducing commit for this section, indexed by the next update. **Skip `sol/leaf-bake`**, as authorized when item 1 does not leave it promising. No production bake implementation or branch is created.
+
+Tried: a display-size two-face bake inside the measurement harness, keeping 64 strips and the exact bend math. Found: unchanged call count, no stable cover gain, worse interior readback-inclusive cost, and extra per-turn work/memory (~2.20 MB for both 524² RGBA faces before overhead). Recommend: do not pursue this variant on this evidence. A software result cannot rule out a device-specific benefit, but it does not justify adding the cache/lifecycle/resize complexity here.
