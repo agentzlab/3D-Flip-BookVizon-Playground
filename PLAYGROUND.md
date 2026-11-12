@@ -17,4 +17,4 @@
 
 ## Snapshot log
 
-- *(pending)* **v13.57** — snapshot lands the moment sync #58 publishes it on the shipping repo (2026-11-11).
+- **v13.57** — snapshotted 2026-11-11 from `MyDigitalStudioz/3D-Flip-BookVizon` @ `1a29eec6` (the snapshot is this commit's tree, plus this charter file).
