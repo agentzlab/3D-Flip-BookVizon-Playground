@@ -1,23 +1,25 @@
 # 3D Flip BookVizon
+> **Playground copy** — snapshot of the shipping flip-book app (v13.57) for agent experiments. This repo publishes its own preview at the link above; nothing here ships. Charter: PLAYGROUND.md.
+
 
 > The BookVizion 3D flipbook viewer — a bookshelf of picture books whose covers turn like stiff board and whose pages bend like paper.
 
 **Branch policy:** work happens on the latest *-vN / project branch. List branches before editing. Never assume the GitHub default is the working line. Working line: 3D-Flip-BookVizon-v14 (GitHub default is main). v10 is frozen as the restore point (v9, v8, v7 and v6 are frozen restore points too). `main` mirrors the v11 tip (GitHub Pages serves `main`) — the Penguin Lab feature set (bookshelf + 3D shelf, five reading modes, quick menu, in-book search, per-page text) on the shipped BEST-25d book.
 
-[![Preview](https://img.shields.io/badge/Preview-Live-brightgreen)](https://mydigitalstudioz.github.io/3D-Flip-BookVizon/)
-![GitHub Pages](https://github.com/MyDigitalStudioz/3D-Flip-BookVizon/actions/workflows/pages/pages-build-deployment/badge.svg)
-![Last commit](https://img.shields.io/github/last-commit/MyDigitalStudioz/3D-Flip-BookVizon)
-![Repo size](https://img.shields.io/github/repo-size/MyDigitalStudioz/3D-Flip-BookVizon)
+[![Preview](https://img.shields.io/badge/Preview-Live-brightgreen)](https://agentzlab.github.io/3D-Flip-BookVizon-Playground/)
+![GitHub Pages](https://github.com/agentzlab/3D-Flip-BookVizon-Playground/actions/workflows/pages/pages-build-deployment/badge.svg)
+![Last commit](https://img.shields.io/github/last-commit/agentzlab/3D-Flip-BookVizon-Playground)
+![Repo size](https://img.shields.io/github/repo-size/agentzlab/3D-Flip-BookVizon-Playground)
 ![Static site](https://img.shields.io/badge/site-static-blue)
 ![Version](https://img.shields.io/badge/version-13.0.0-orange)
 
 ## Live preview
 
-**https://mydigitalstudioz.github.io/3D-Flip-BookVizon/**
+**https://agentzlab.github.io/3D-Flip-BookVizon-Playground/**
 
 The viewer opens on its bookshelf: eight books — two published picture books, *Harlow's Accidental Journey* (the BEST-25d final) and *The Night I Met Santa*, plus six demo books. Pick one and it opens in the reader; a link like `#book=the-night-i-met-santa` opens that book directly. It is one static page — it runs from GitHub Pages or straight off disk by double-clicking `index.html`, with no server and no build step. Harlow's pages also ride along as data URIs in `images/pages-data.js`, loaded before the first turn, so the resident book never waits on a download mid-flip.
 
-![Harlow cover on the dark hardcover stage](https://github.com/MyDigitalStudioz/3D-Flip-BookVizon/raw/main/media/hero.jpg?v=202611101752)
+![Harlow cover on the dark hardcover stage](https://github.com/agentzlab/3D-Flip-BookVizon-Playground/raw/main/media/hero.jpg?v=202611101752)
 
 ## Screenshots
 
@@ -25,19 +27,19 @@ Captured from the working viewer on `3D-Flip-BookVizon-v11`. The hero book is th
 
 **Bookshelf** — the front door: every book at a glance, cover and title only — the ⓘ on a cover's corner opens its info card, and a ★ count rides the cover when the book has marks.
 
-![Bookshelf](https://github.com/MyDigitalStudioz/3D-Flip-BookVizon/raw/main/media/shelf.jpg?v=202611101752)
+![Bookshelf](https://github.com/agentzlab/3D-Flip-BookVizon-Playground/raw/main/media/shelf.jpg?v=202611101752)
 
 **3D shelf** — the same library standing on a shelf: drag or step along it, and Open pulls the focused book out.
 
-![3D bookshelf](https://github.com/MyDigitalStudioz/3D-Flip-BookVizon/raw/main/media/shelf-3d.jpg?v=202611101752)
+![3D bookshelf](https://github.com/agentzlab/3D-Flip-BookVizon-Playground/raw/main/media/shelf-3d.jpg?v=202611101752)
 
 **Mid-book** — the first story spread, pages 6–7.
 
-![Story spread, pages 6 and 7](https://github.com/MyDigitalStudioz/3D-Flip-BookVizon/raw/main/media/spread.jpg?v=202611101752)
+![Story spread, pages 6 and 7](https://github.com/agentzlab/3D-Flip-BookVizon-Playground/raw/main/media/spread.jpg?v=202611101752)
 
 **Phone** — the same cover at a 390px-wide window.
 
-![Phone view of the cover](https://github.com/MyDigitalStudioz/3D-Flip-BookVizon/raw/main/media/mobile.jpg?v=202611101752)
+![Phone view of the cover](https://github.com/agentzlab/3D-Flip-BookVizon-Playground/raw/main/media/mobile.jpg?v=202611101752)
 
 ## What's inside
 
@@ -123,7 +125,7 @@ Changes land on new branches. `main` is the published mirror, and GitHub Pages s
 | :--- | :--- |
 | **Stack** | Static HTML · WebGL leaf · Vanilla JS · GitHub Pages |
 | **Books** | 8 on the shelf — 2 published picture books + 6 demo books |
-| **Preview** | 🌐 [mydigitalstudioz.github.io/3D-Flip-BookVizon](https://mydigitalstudioz.github.io/3D-Flip-BookVizon/) |
+| **Preview** | 🌐 [mydigitalstudioz.github.io/3D-Flip-BookVizon](https://agentzlab.github.io/3D-Flip-BookVizon-Playground/) |
 | **Status** | 🟢 Live preview |
 
 ## Repository layout
